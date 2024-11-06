@@ -167,7 +167,7 @@ class DLGBlock(nn.Module):
             pred_len = self.configs.pred_len
             x_out = x.detach().cpu().numpy()
             mra_out = mra.detach().cpu().numpy()
-            mra_path = 'D:/服务器代码/Time-Series-Library-main/mra_out/'
+            mra_path = 'D:/Code/Water_level_predictipon/enc_out/'
             if not os.path.exists(mra_path):
                 os.makedirs(mra_path)
             np.save(mra_path + str(self.number) + '_' + str(pred_len) + '_'+    'mra.npy', mra_out)
